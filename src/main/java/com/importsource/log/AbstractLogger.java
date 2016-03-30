@@ -7,7 +7,10 @@ import java.util.Date;
  * @author Hezf
  *
  */
-public abstract class AbstractLogger {
+public abstract class AbstractLogger implements Logger {
+	
+	
+	protected Class clazz;
 	/**
 	 * 得到格式化输出
 	 * @param clazz
@@ -25,6 +28,20 @@ public abstract class AbstractLogger {
 		return "["+date+"]["+level+"] ("+pkgName+"."+lineInfo+")";
 	}
 	
-	public abstract void log(String msg,String level);
+	public void i(String msg) {
+		log(msg, "INFO");
+		
+	}
+
+	public void e(String msg) {
+		log(msg, "ERROR");
+		
+	}
+
+	public void w(String msg) {
+		log(msg, "WARN");
+	}
+	
+	protected abstract void log(String msg,String level);
 
 }

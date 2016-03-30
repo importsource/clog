@@ -5,4 +5,12 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>importsource-log4jc</name>
   <description>importsource-log4jc</description>
+  
+  <dependencies>
+    <dependency>
+			<groupId>com.importsource.conf</groupId>
+			<artifactId>importsource-conf</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+  </dependencies>
 </project>

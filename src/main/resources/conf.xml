@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<property>
+		<name>clog.logger</name>
+		<value>FileLogger</value>
+	</property>
+	<property>
+		<name>fs.default.name</name>
+		<value>hdfs://master:9000</value>
+	</property>
+	<property>
+		<name>dfs.name.dir</name>
+		<value>/hadoop/name</value>
+	</property>
+
+</configuration>
