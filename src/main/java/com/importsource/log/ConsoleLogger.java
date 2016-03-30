@@ -1,5 +1,10 @@
 package com.importsource.log;
 
+/**
+ * 控制台输出
+ * @author Hezf
+ *
+ */
 public class ConsoleLogger extends AbstractLogger implements Logger {
     private Class clazz;
 	

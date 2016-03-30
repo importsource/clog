@@ -1,4 +1,9 @@
 package com.importsource.log;
+/**
+ * 当前行工具类
+ * @author Hezf
+ *
+ */
 public class CurrentLine {
     /**
      * @param args
