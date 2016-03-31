@@ -24,10 +24,15 @@ public class FileLogger extends AbstractLogger  {
 	 */
 	@Override
 	protected void log(String msg, String level) {
-           String log=getFormat(super.clazz,level)+msg;
+           String log=getFinalLog(msg, level);
            stdout(log);
            //输出到指定的文件中
           writeByLevel(log,level);
+	}
+
+
+	private String getFinalLog(String msg, String level) {
+		return getFormat(super.clazz,level)+msg;
 	}
 
 
