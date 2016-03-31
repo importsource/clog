@@ -17,6 +17,11 @@ public class LogManager {
 	private static final String LOGGER_PKG = "com.importsource.log.core.logger.";
 	private static Properties p=Configuration.newPropertiesInstance();
 
+	/**
+	 * 得到日志类
+	 * @param clazz 日志所在类
+	 * @return Logger 日志对象
+	 */
 	public static Logger getLogger(Class clazz) {
 		String loggerStr = PropertiesTools.get(p, "clog.logger", null);
 		Logger logger=null;

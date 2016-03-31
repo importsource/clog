@@ -6,8 +6,20 @@ package com.importsource.log.core;
  *
  */
 public interface Logger {
-	public void i(String string);
-	public void e(String string);
-	public void w(String string);
+	/**
+	 * 消息输出
+	 * @param msg 输出内容
+	 */
+	public void i(String msg);
+	/**
+	 * 错误输出
+	 * @param msg 输出内容
+	 */
+	public void e(String msg);
+	/**
+	 * 警告输出
+	 * @param msg 输出内容
+	 */
+	public void w(String msg);
 
 }
