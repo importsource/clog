@@ -9,8 +9,7 @@ import java.io.RandomAccessFile;
 
 /**
  *
- * @author malik
- * @version 2011-3-10 下午10:49:41
+ * @author hezf
  */
 public class AppendFile {
 	

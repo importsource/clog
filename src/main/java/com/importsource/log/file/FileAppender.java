@@ -6,6 +6,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import com.importsource.log.core.Appendable;
 
+/**
+ * 日志追加实现
+ * @author Hezf
+ *
+ */
 public class FileAppender implements Appendable {
 
 	public void append(String value) {
