@@ -6,11 +6,10 @@ public class LogDemo {
 
 	public static void main(String[] args) {
 		Logger logger = LogManager.getLogger(LogDemo.class);
-		for(int i=0;i<500;i++){
-			logger.i("sdfsdf");
-			logger.e("sdfsdf");
-			logger.w("水电费水电费水电费水电费");
-		}
+		logger.i("新info");
+		logger.e("新error");
+		logger.w("新warn");
+	
 		
 	}
 

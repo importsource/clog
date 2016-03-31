@@ -4,7 +4,6 @@
 package com.importsource.log;
 
 
-
 /**
  * 通过文件输出
  * @author Hezf
@@ -12,7 +11,7 @@ package com.importsource.log;
  */
 public class FileLogger extends AbstractLogger  {
 
-	public FileLogger(Class clazz) {
+	public FileLogger(Class<?> clazz) {
 		super.clazz = clazz;
 	}
 
@@ -26,15 +25,48 @@ public class FileLogger extends AbstractLogger  {
 	@Override
 	protected void log(String msg, String level) {
            String log=getFormat(super.clazz,level)+msg;
-           System.out.println(log);
+           stdout(log);
            //输出到指定的文件中
-           write(log);
+          writeByLevel(log,level);
 	}
+
+
+	
+
+	
+
+
+	private void writeByLevel(String log,String level) {
+		 String confLevel=getLevel();
+		 //confLevel:w,then if(level=w||e){write()}
+         //confLevel:e,then if(level=e){write()}
+         //confLevel:i,then if(level=e||i||w){write()}
+		 //String iwe="iwe";
+		 if(confLevel.equals(INFO)){
+			 write(log);;
+		 }
+		 if(confLevel.equals(WARN)){
+			 if(level.equals(WARN)||level.equals(ERROR)){
+				 write(log);
+			 }
+		 }
+		 if(confLevel.equals(ERROR)){
+			 if(level.equals(ERROR)){
+				 write(log);
+			 }
+		 }
+	}
+
 
 	private void write(String log) {
 		FileAppender  f=FileManager.getAppender();
 		f.append(log);
 		
+	}
+	
+	
+	private void stdout(String log) {
+		System.out.println(log);
 	}
 
 }

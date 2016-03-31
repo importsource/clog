@@ -12,9 +12,9 @@ import com.importsource.conf.PropertiesTools;
  *
  */
 public class LogManager {
+	private static Properties p=Configuration.newPropertiesInstance();
 
 	public static Logger getLogger(Class clazz) {
-		Properties p = com.importsource.conf.Properties.newInstance("conf.xml");
 		String loggerStr = PropertiesTools.get(p, "clog.logger", null);
 		Logger logger=null;
 		Class[] paraTypes = {Class.class};

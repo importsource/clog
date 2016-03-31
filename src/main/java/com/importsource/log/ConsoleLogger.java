@@ -14,11 +14,5 @@ public class ConsoleLogger extends AbstractLogger implements Logger {
 	@Override
 	protected void log(String msg,String level) {
 		System.out.println(getFormat(clazz,level)+msg);
-		
 	}
-
-	
-
-	
-
 }
