@@ -1,4 +1,7 @@
-package com.importsource.log;
+package com.importsource.log.core.logger;
+
+import com.importsource.log.core.AbstractLogger;
+import com.importsource.log.core.Logger;
 
 /**
  * 控制台输出

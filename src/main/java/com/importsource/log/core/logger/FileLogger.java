@@ -1,8 +1,11 @@
 /**
  * 
  */
-package com.importsource.log;
+package com.importsource.log.core.logger;
 
+import com.importsource.log.core.AbstractLogger;
+import com.importsource.log.file.FileAppender;
+import com.importsource.log.file.FileManager;
 
 /**
  * 通过文件输出

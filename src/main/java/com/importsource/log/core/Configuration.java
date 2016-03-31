@@ -1,4 +1,4 @@
-package com.importsource.log;
+package com.importsource.log.core;
 
 import com.importsource.conf.Properties;
 

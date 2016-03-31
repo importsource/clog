@@ -1,6 +1,6 @@
 package com.importsource.log.sample;
-import com.importsource.log.LogManager;
-import com.importsource.log.Logger;
+import com.importsource.log.client.LogManager;
+import com.importsource.log.core.Logger;
 
 public class LogDemo {
 

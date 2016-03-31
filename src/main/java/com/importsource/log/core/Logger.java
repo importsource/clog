@@ -1,4 +1,4 @@
-package com.importsource.log;
+package com.importsource.log.core;
 
 /**
  * 日志接口

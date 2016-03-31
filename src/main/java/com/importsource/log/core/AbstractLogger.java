@@ -1,9 +1,10 @@
-package com.importsource.log;
+package com.importsource.log.core;
 
 import java.util.Date;
 
 import com.importsource.conf.Properties;
 import com.importsource.conf.PropertiesTools;
+import com.importsource.log.util.CurrentLine;
 
 /**
  * 日志实现基类

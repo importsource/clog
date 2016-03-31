@@ -1,10 +1,12 @@
-package com.importsource.log;
+package com.importsource.log.client;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
 import com.importsource.conf.Properties;
 import com.importsource.conf.PropertiesTools;
+import com.importsource.log.core.Configuration;
+import com.importsource.log.core.Logger;
 
 /**
  * 日志管理器
@@ -12,6 +14,7 @@ import com.importsource.conf.PropertiesTools;
  *
  */
 public class LogManager {
+	private static final String LOGGER_PKG = "com.importsource.log.core.logger.";
 	private static Properties p=Configuration.newPropertiesInstance();
 
 	public static Logger getLogger(Class clazz) {
@@ -20,7 +23,7 @@ public class LogManager {
 		Class[] paraTypes = {Class.class};
 		Object[] paras = {clazz};
 		try {
-			Class clas = Class.forName("com.importsource.log."+loggerStr);
+			Class clas = Class.forName(LOGGER_PKG+loggerStr);
 			Constructor cons = clas.getConstructor(paraTypes);
 			logger = (Logger)cons.newInstance(paras);
 		} catch (ClassNotFoundException e) {

@@ -1,9 +1,10 @@
-package com.importsource.log;
+package com.importsource.log.file;
 
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import com.importsource.log.core.Appendable;
 
 public class FileAppender implements Appendable {
 
@@ -40,5 +41,7 @@ public class FileAppender implements Appendable {
 		// File("C:"+File.pathSeparator+"clog"+File.pathSeparator+"log"+File.pathSeparator+"20160330.log");
 		return f;
 	}
+
+	
 
 }
